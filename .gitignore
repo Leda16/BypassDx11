@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+*.lock
+*.vsidx
+*.ipch
+*.opendb
+*.db-wal
+*.db-shm
+*.db
+C++/.vs/Dx11/v17/.suo
