@@ -129,6 +129,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)ImGui\dxsdk\Include\;$(SolutionDir)ImGui\imgui\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -177,6 +178,8 @@
   <ItemGroup>
     <ClInclude Include="addons\imspinner.h" />
     <ClInclude Include="animate.h" />
+    <ClInclude Include="encryption\meta_random.hpp" />
+    <ClInclude Include="encryption\obfuscator.hpp" />
     <ClInclude Include="encryption\xor.h" />
     <ClInclude Include="font\IconsFontAwesome6.h" />
     <ClInclude Include="font\IconsFontAwesome6Brands.h" />

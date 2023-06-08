@@ -24,6 +24,7 @@
 #include "func/getIp.h"
 #include "func/getInfo.h"
 #include "protect/protectmain.h"
+#include "encryption/obfuscator.hpp"
 
 // Cabecalhos Imgui
 #include "main.hpp"
