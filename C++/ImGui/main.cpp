@@ -221,7 +221,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
 
-                        std::string urlCheck = "http://201.93.100.104:8221/API/function.php?action=accessAccount&username=" + user + "&password=" + pass;
+                        std::string urlCheck = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=accessAccount&username=" + user + "&password=" + pass;
 
                         std::string response = sendRequest(urlCheck);
 
@@ -234,7 +234,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                             std::string hwid = GetHWID();
 
-                            std::string urlCheck2 = "http://201.93.100.104:8221/API/function.php?action=checkHwid&username=" + user + "&hwid=" + hwid;
+                            std::string urlCheck2 = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=checkHwid&username=" + user + "&hwid=" + hwid;
 
 
                             std::string response2 = sendRequest(urlCheck2);
@@ -242,7 +242,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
 
-                                std::string urlCheckBan = "http://201.93.100.104:8221/API/function.php?action=banCheck&username=" + user;
+                                std::string urlCheckBan = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=banCheck&username=" + user;
 
                                 std::string responseBan = sendRequest(urlCheckBan);
 
@@ -255,7 +255,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                     std::string ip = real_ip();
 
 
-                                    std::string sendDiscord = "http://201.93.100.104:8221/API/function.php?action=sendDiscord&username=" + user + "&hwid=" + hwid + "&ip=" + ip;
+                                    std::string sendDiscord = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=sendDiscord&username=" + user + "&hwid=" + hwid + "&ip=" + ip;
 
                                     std::string responseDiscord = sendRequest(sendDiscord);
                                     if (responseDiscord.find("API:INFORMATION_SEND") != std::string::npos) {
@@ -268,7 +268,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                         std::string gpu = GetGPUInfo();
                                         std::string mb = GetMotherboardInfo();
                                         
-                                        std::string sendInfo = "http://201.93.100.104:8221/API/function.php?action=createInfo&username=" + user + "&hwid=" + hwid + "&ip=" + ip + "&cpu=" + cpu + "&gpu=" + gpu + "&mb=" + mb;
+                                        std::string sendInfo = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=createInfo&username=" + user + "&hwid=" + hwid + "&ip=" + ip + "&cpu=" + cpu + "&gpu=" + gpu + "&mb=" + mb;
 
                                         std::string responseInfo = sendRequest(sendInfo);
                                         if (responseInfo.find("API:INFORMATION_SEND") != std::string::npos) {
@@ -327,9 +327,11 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                                 std::string hwid = GetHWID();
                                 std::string ip = real_ip();
+                                std::string cpu = GetProcessorInfo();
+                                std::string gpu = GetGPUInfo();
+                                std::string mb = GetMotherboardInfo();
 
-
-                                std::string sendDiscord2 = "http://201.93.100.104:8221/API/function.php?action=sendDiscord2&username=" + user + "&hwid=" + hwid + "&ip=" + ip;
+                                std::string sendDiscord2 = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=sendDiscord2&username=" + user + "&hwid=" + hwid + "&ip=" + ip + "&cpu=" + cpu + "&gpu=" + gpu + "&mb=" + mb;
 
                                 std::string responseDiscord2 = sendRequest(sendDiscord2);
                                 if (responseDiscord2.find("API:INFORMATION_SEND") != std::string::npos){
