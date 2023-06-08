@@ -22,13 +22,14 @@
 ## 🔜 Em Breve
 
 - Site
-- Gerador de keys
 
 ## 🔄 Atualizações
 
 - Otimizaçoes no loader
 - Adicionado Imgui
 - Adicionado WebHooks de seguranca(Login, Tentativa de login, Cadastro, Infos PC, Tentativa de crack)
+- Gerador de keys
+- Adicionado mais funcoes nos webhooks de seguranca
 
 ## 📄 Licença
 
