@@ -1,1 +1,345 @@
-﻿  ImGui.vcxproj -> C:\xampp\htdocs\BypassDx11\C++\release\Dx11.exe
+﻿  main.cpp
+C:\xampp\htdocs\BypassDx11\C++\ImGui\func\changeName.h(16,85): warning C4244: 'argumento': conversão de '_Rep' para 'unsigned int', possível perda de dados
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(66,1): warning C4005: 'STATUS_WAIT_0': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2549,1): message : consulte a definição anterior de 'STATUS_WAIT_0'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(223,1): warning C4005: 'STATUS_ABANDONED_WAIT_0': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2550,1): message : consulte a definição anterior de 'STATUS_ABANDONED_WAIT_0'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(246,1): warning C4005: 'STATUS_USER_APC': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2551,1): message : consulte a definição anterior de 'STATUS_USER_APC'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(282,1): warning C4005: 'STATUS_TIMEOUT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2552,1): message : consulte a definição anterior de 'STATUS_TIMEOUT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(291,1): warning C4005: 'STATUS_PENDING': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2553,1): message : consulte a definição anterior de 'STATUS_PENDING'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(738,1): warning C4005: 'DBG_EXCEPTION_HANDLED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2554,1): message : consulte a definição anterior de 'DBG_EXCEPTION_HANDLED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(747,1): warning C4005: 'DBG_CONTINUE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2555,1): message : consulte a definição anterior de 'DBG_CONTINUE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(822,1): warning C4005: 'STATUS_SEGMENT_NOTIFICATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2556,1): message : consulte a definição anterior de 'STATUS_SEGMENT_NOTIFICATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(985,1): warning C4005: 'STATUS_FATAL_APP_EXIT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2557,1): message : consulte a definição anterior de 'STATUS_FATAL_APP_EXIT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1323,1): warning C4005: 'DBG_REPLY_LATER': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2558,1): message : consulte a definição anterior de 'DBG_REPLY_LATER'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1341,1): warning C4005: 'DBG_TERMINATE_THREAD': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2559,1): message : consulte a definição anterior de 'DBG_TERMINATE_THREAD'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1350,1): warning C4005: 'DBG_TERMINATE_PROCESS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2560,1): message : consulte a definição anterior de 'DBG_TERMINATE_PROCESS'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1359,1): warning C4005: 'DBG_CONTROL_C': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2561,1): message : consulte a definição anterior de 'DBG_CONTROL_C'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1368,1): warning C4005: 'DBG_PRINTEXCEPTION_C': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2562,1): message : consulte a definição anterior de 'DBG_PRINTEXCEPTION_C'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1377,1): warning C4005: 'DBG_RIPEXCEPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2563,1): message : consulte a definição anterior de 'DBG_RIPEXCEPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1386,1): warning C4005: 'DBG_CONTROL_BREAK': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2564,1): message : consulte a definição anterior de 'DBG_CONTROL_BREAK'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1395,1): warning C4005: 'DBG_COMMAND_EXCEPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2565,1): message : consulte a definição anterior de 'DBG_COMMAND_EXCEPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1404,1): warning C4005: 'DBG_PRINTEXCEPTION_WIDE_C': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2566,1): message : consulte a definição anterior de 'DBG_PRINTEXCEPTION_WIDE_C'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1436,1): warning C4005: 'STATUS_GUARD_PAGE_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2567,1): message : consulte a definição anterior de 'STATUS_GUARD_PAGE_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1447,1): warning C4005: 'STATUS_DATATYPE_MISALIGNMENT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2568,1): message : consulte a definição anterior de 'STATUS_DATATYPE_MISALIGNMENT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1458,1): warning C4005: 'STATUS_BREAKPOINT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2569,1): message : consulte a definição anterior de 'STATUS_BREAKPOINT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1469,1): warning C4005: 'STATUS_SINGLE_STEP': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2570,1): message : consulte a definição anterior de 'STATUS_SINGLE_STEP'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1772,1): warning C4005: 'STATUS_LONGJUMP': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2571,1): message : consulte a definição anterior de 'STATUS_LONGJUMP'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1799,1): warning C4005: 'STATUS_UNWIND_CONSOLIDATE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2572,1): message : consulte a definição anterior de 'STATUS_UNWIND_CONSOLIDATE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1914,1): warning C4005: 'DBG_EXCEPTION_NOT_HANDLED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2573,1): message : consulte a definição anterior de 'DBG_EXCEPTION_NOT_HANDLED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2060,1): warning C4005: 'STATUS_ACCESS_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2574,1): message : consulte a definição anterior de 'STATUS_ACCESS_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2069,1): warning C4005: 'STATUS_IN_PAGE_ERROR': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2575,1): message : consulte a definição anterior de 'STATUS_IN_PAGE_ERROR'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2087,1): warning C4005: 'STATUS_INVALID_HANDLE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2576,1): message : consulte a definição anterior de 'STATUS_INVALID_HANDLE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2132,1): warning C4005: 'STATUS_INVALID_PARAMETER': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2577,1): message : consulte a definição anterior de 'STATUS_INVALID_PARAMETER'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2232,1): warning C4005: 'STATUS_NO_MEMORY': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2578,1): message : consulte a definição anterior de 'STATUS_NO_MEMORY'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2289,1): warning C4005: 'STATUS_ILLEGAL_INSTRUCTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2579,1): message : consulte a definição anterior de 'STATUS_ILLEGAL_INSTRUCTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2370,1): warning C4005: 'STATUS_NONCONTINUABLE_EXCEPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2580,1): message : consulte a definição anterior de 'STATUS_NONCONTINUABLE_EXCEPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2379,1): warning C4005: 'STATUS_INVALID_DISPOSITION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2581,1): message : consulte a definição anterior de 'STATUS_INVALID_DISPOSITION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3312,1): warning C4005: 'STATUS_ARRAY_BOUNDS_EXCEEDED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2582,1): message : consulte a definição anterior de 'STATUS_ARRAY_BOUNDS_EXCEEDED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3322,1): warning C4005: 'STATUS_FLOAT_DENORMAL_OPERAND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2583,1): message : consulte a definição anterior de 'STATUS_FLOAT_DENORMAL_OPERAND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3332,1): warning C4005: 'STATUS_FLOAT_DIVIDE_BY_ZERO': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2584,1): message : consulte a definição anterior de 'STATUS_FLOAT_DIVIDE_BY_ZERO'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3342,1): warning C4005: 'STATUS_FLOAT_INEXACT_RESULT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2585,1): message : consulte a definição anterior de 'STATUS_FLOAT_INEXACT_RESULT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3352,1): warning C4005: 'STATUS_FLOAT_INVALID_OPERATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2586,1): message : consulte a definição anterior de 'STATUS_FLOAT_INVALID_OPERATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3362,1): warning C4005: 'STATUS_FLOAT_OVERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2587,1): message : consulte a definição anterior de 'STATUS_FLOAT_OVERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3372,1): warning C4005: 'STATUS_FLOAT_STACK_CHECK': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2588,1): message : consulte a definição anterior de 'STATUS_FLOAT_STACK_CHECK'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3382,1): warning C4005: 'STATUS_FLOAT_UNDERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2589,1): message : consulte a definição anterior de 'STATUS_FLOAT_UNDERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3392,1): warning C4005: 'STATUS_INTEGER_DIVIDE_BY_ZERO': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2590,1): message : consulte a definição anterior de 'STATUS_INTEGER_DIVIDE_BY_ZERO'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3402,1): warning C4005: 'STATUS_INTEGER_OVERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2591,1): message : consulte a definição anterior de 'STATUS_INTEGER_OVERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3412,1): warning C4005: 'STATUS_PRIVILEGED_INSTRUCTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2592,1): message : consulte a definição anterior de 'STATUS_PRIVILEGED_INSTRUCTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4358,1): warning C4005: 'STATUS_STACK_OVERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2593,1): message : consulte a definição anterior de 'STATUS_STACK_OVERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4875,1): warning C4005: 'STATUS_DLL_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2594,1): message : consulte a definição anterior de 'STATUS_DLL_NOT_FOUND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4904,1): warning C4005: 'STATUS_ORDINAL_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2595,1): message : consulte a definição anterior de 'STATUS_ORDINAL_NOT_FOUND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4914,1): warning C4005: 'STATUS_ENTRYPOINT_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2596,1): message : consulte a definição anterior de 'STATUS_ENTRYPOINT_NOT_FOUND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4924,1): warning C4005: 'STATUS_CONTROL_C_EXIT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2597,1): message : consulte a definição anterior de 'STATUS_CONTROL_C_EXIT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(5002,1): warning C4005: 'STATUS_DLL_INIT_FAILED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2598,1): message : consulte a definição anterior de 'STATUS_DLL_INIT_FAILED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(5999,1): warning C4005: 'STATUS_CONTROL_STACK_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2599,1): message : consulte a definição anterior de 'STATUS_CONTROL_STACK_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(7593,1): warning C4005: 'STATUS_FLOAT_MULTIPLE_FAULTS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2600,1): message : consulte a definição anterior de 'STATUS_FLOAT_MULTIPLE_FAULTS'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(7603,1): warning C4005: 'STATUS_FLOAT_MULTIPLE_TRAPS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2601,1): message : consulte a definição anterior de 'STATUS_FLOAT_MULTIPLE_TRAPS'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(7735,1): warning C4005: 'STATUS_REG_NAT_CONSUMPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2602,1): message : consulte a definição anterior de 'STATUS_REG_NAT_CONSUMPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(8718,1): warning C4005: 'STATUS_HEAP_CORRUPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2603,1): message : consulte a definição anterior de 'STATUS_HEAP_CORRUPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(8946,1): warning C4005: 'STATUS_STACK_BUFFER_OVERRUN': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2604,1): message : consulte a definição anterior de 'STATUS_STACK_BUFFER_OVERRUN'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(9073,1): warning C4005: 'STATUS_INVALID_CRUNTIME_PARAMETER': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2605,1): message : consulte a definição anterior de 'STATUS_INVALID_CRUNTIME_PARAMETER'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(9136,1): warning C4005: 'STATUS_ASSERTION_FAILURE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2606,1): message : consulte a definição anterior de 'STATUS_ASSERTION_FAILURE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(10045,1): warning C4005: 'STATUS_ENCLAVE_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2607,1): message : consulte a definição anterior de 'STATUS_ENCLAVE_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(10697,1): warning C4005: 'STATUS_INTERRUPTED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2608,1): message : consulte a definição anterior de 'STATUS_INTERRUPTED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(10706,1): warning C4005: 'STATUS_THREAD_NOT_RUNNING': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2609,1): message : consulte a definição anterior de 'STATUS_THREAD_NOT_RUNNING'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(11018,1): warning C4005: 'STATUS_ALREADY_REGISTERED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2610,1): message : consulte a definição anterior de 'STATUS_ALREADY_REGISTERED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(14865,1): warning C4005: 'STATUS_SXS_EARLY_DEACTIVATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2612,1): message : consulte a definição anterior de 'STATUS_SXS_EARLY_DEACTIVATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(14874,1): warning C4005: 'STATUS_SXS_INVALID_DEACTIVATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2613,1): message : consulte a definição anterior de 'STATUS_SXS_INVALID_DEACTIVATION'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57679,1): message : consulte a definição anterior de 'DXGI_STATUS_OCCLUDED'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57688,1): message : consulte a definição anterior de 'DXGI_STATUS_CLIPPED'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57697,1): message : consulte a definição anterior de 'DXGI_STATUS_NO_REDIRECTION'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57706,1): message : consulte a definição anterior de 'DXGI_STATUS_NO_DESKTOP_ACCESS'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57715,1): message : consulte a definição anterior de 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57724,1): message : consulte a definição anterior de 'DXGI_STATUS_MODE_CHANGED'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57733,1): message : consulte a definição anterior de 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57748,1): message : consulte a definição anterior de 'DXGI_ERROR_INVALID_CALL'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57757,1): message : consulte a definição anterior de 'DXGI_ERROR_NOT_FOUND'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57766,1): message : consulte a definição anterior de 'DXGI_ERROR_MORE_DATA'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57775,1): message : consulte a definição anterior de 'DXGI_ERROR_UNSUPPORTED'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57784,1): message : consulte a definição anterior de 'DXGI_ERROR_DEVICE_REMOVED'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57793,1): message : consulte a definição anterior de 'DXGI_ERROR_DEVICE_HUNG'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57803,1): message : consulte a definição anterior de 'DXGI_ERROR_DEVICE_RESET'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57812,1): message : consulte a definição anterior de 'DXGI_ERROR_WAS_STILL_DRAWING'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57822,1): message : consulte a definição anterior de 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57831,1): message : consulte a definição anterior de 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57841,1): message : consulte a definição anterior de 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57850,1): message : consulte a definição anterior de 'DXGI_ERROR_NONEXCLUSIVE'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57859,1): message : consulte a definição anterior de 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57869,1): message : consulte a definição anterior de 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(57878,1): message : consulte a definição anterior de 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58170,1): message : consulte a definição anterior de 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58179,1): message : consulte a definição anterior de 'D3D11_ERROR_FILE_NOT_FOUND'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58189,1): message : consulte a definição anterior de 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58198,1): message : consulte a definição anterior de 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58146,1): message : consulte a definição anterior de 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58155,1): message : consulte a definição anterior de 'D3D10_ERROR_FILE_NOT_FOUND'
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(91,117): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(91,104): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(91,68): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(91,34): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(25,242): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(25,229): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(25,199): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(25,142): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(172,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(184,36): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(215,38): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(381,36): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(390,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(402,38): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(33,11): warning C4101: 'mouse': variável local não referenciada
+  protectmain.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(66,1): warning C4005: 'STATUS_WAIT_0': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2549,1): message : consulte a definição anterior de 'STATUS_WAIT_0'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(223,1): warning C4005: 'STATUS_ABANDONED_WAIT_0': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2550,1): message : consulte a definição anterior de 'STATUS_ABANDONED_WAIT_0'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(246,1): warning C4005: 'STATUS_USER_APC': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2551,1): message : consulte a definição anterior de 'STATUS_USER_APC'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(282,1): warning C4005: 'STATUS_TIMEOUT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2552,1): message : consulte a definição anterior de 'STATUS_TIMEOUT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(291,1): warning C4005: 'STATUS_PENDING': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2553,1): message : consulte a definição anterior de 'STATUS_PENDING'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(738,1): warning C4005: 'DBG_EXCEPTION_HANDLED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2554,1): message : consulte a definição anterior de 'DBG_EXCEPTION_HANDLED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(747,1): warning C4005: 'DBG_CONTINUE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2555,1): message : consulte a definição anterior de 'DBG_CONTINUE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(822,1): warning C4005: 'STATUS_SEGMENT_NOTIFICATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2556,1): message : consulte a definição anterior de 'STATUS_SEGMENT_NOTIFICATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(985,1): warning C4005: 'STATUS_FATAL_APP_EXIT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2557,1): message : consulte a definição anterior de 'STATUS_FATAL_APP_EXIT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1323,1): warning C4005: 'DBG_REPLY_LATER': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2558,1): message : consulte a definição anterior de 'DBG_REPLY_LATER'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1341,1): warning C4005: 'DBG_TERMINATE_THREAD': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2559,1): message : consulte a definição anterior de 'DBG_TERMINATE_THREAD'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1350,1): warning C4005: 'DBG_TERMINATE_PROCESS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2560,1): message : consulte a definição anterior de 'DBG_TERMINATE_PROCESS'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1359,1): warning C4005: 'DBG_CONTROL_C': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2561,1): message : consulte a definição anterior de 'DBG_CONTROL_C'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1368,1): warning C4005: 'DBG_PRINTEXCEPTION_C': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2562,1): message : consulte a definição anterior de 'DBG_PRINTEXCEPTION_C'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1377,1): warning C4005: 'DBG_RIPEXCEPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2563,1): message : consulte a definição anterior de 'DBG_RIPEXCEPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1386,1): warning C4005: 'DBG_CONTROL_BREAK': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2564,1): message : consulte a definição anterior de 'DBG_CONTROL_BREAK'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1395,1): warning C4005: 'DBG_COMMAND_EXCEPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2565,1): message : consulte a definição anterior de 'DBG_COMMAND_EXCEPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1404,1): warning C4005: 'DBG_PRINTEXCEPTION_WIDE_C': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2566,1): message : consulte a definição anterior de 'DBG_PRINTEXCEPTION_WIDE_C'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1436,1): warning C4005: 'STATUS_GUARD_PAGE_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2567,1): message : consulte a definição anterior de 'STATUS_GUARD_PAGE_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1447,1): warning C4005: 'STATUS_DATATYPE_MISALIGNMENT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2568,1): message : consulte a definição anterior de 'STATUS_DATATYPE_MISALIGNMENT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1458,1): warning C4005: 'STATUS_BREAKPOINT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2569,1): message : consulte a definição anterior de 'STATUS_BREAKPOINT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1469,1): warning C4005: 'STATUS_SINGLE_STEP': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2570,1): message : consulte a definição anterior de 'STATUS_SINGLE_STEP'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1772,1): warning C4005: 'STATUS_LONGJUMP': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2571,1): message : consulte a definição anterior de 'STATUS_LONGJUMP'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1799,1): warning C4005: 'STATUS_UNWIND_CONSOLIDATE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2572,1): message : consulte a definição anterior de 'STATUS_UNWIND_CONSOLIDATE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(1914,1): warning C4005: 'DBG_EXCEPTION_NOT_HANDLED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2573,1): message : consulte a definição anterior de 'DBG_EXCEPTION_NOT_HANDLED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2060,1): warning C4005: 'STATUS_ACCESS_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2574,1): message : consulte a definição anterior de 'STATUS_ACCESS_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2069,1): warning C4005: 'STATUS_IN_PAGE_ERROR': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2575,1): message : consulte a definição anterior de 'STATUS_IN_PAGE_ERROR'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2087,1): warning C4005: 'STATUS_INVALID_HANDLE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2576,1): message : consulte a definição anterior de 'STATUS_INVALID_HANDLE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2132,1): warning C4005: 'STATUS_INVALID_PARAMETER': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2577,1): message : consulte a definição anterior de 'STATUS_INVALID_PARAMETER'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2232,1): warning C4005: 'STATUS_NO_MEMORY': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2578,1): message : consulte a definição anterior de 'STATUS_NO_MEMORY'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2289,1): warning C4005: 'STATUS_ILLEGAL_INSTRUCTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2579,1): message : consulte a definição anterior de 'STATUS_ILLEGAL_INSTRUCTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2370,1): warning C4005: 'STATUS_NONCONTINUABLE_EXCEPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2580,1): message : consulte a definição anterior de 'STATUS_NONCONTINUABLE_EXCEPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(2379,1): warning C4005: 'STATUS_INVALID_DISPOSITION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2581,1): message : consulte a definição anterior de 'STATUS_INVALID_DISPOSITION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3312,1): warning C4005: 'STATUS_ARRAY_BOUNDS_EXCEEDED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2582,1): message : consulte a definição anterior de 'STATUS_ARRAY_BOUNDS_EXCEEDED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3322,1): warning C4005: 'STATUS_FLOAT_DENORMAL_OPERAND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2583,1): message : consulte a definição anterior de 'STATUS_FLOAT_DENORMAL_OPERAND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3332,1): warning C4005: 'STATUS_FLOAT_DIVIDE_BY_ZERO': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2584,1): message : consulte a definição anterior de 'STATUS_FLOAT_DIVIDE_BY_ZERO'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3342,1): warning C4005: 'STATUS_FLOAT_INEXACT_RESULT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2585,1): message : consulte a definição anterior de 'STATUS_FLOAT_INEXACT_RESULT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3352,1): warning C4005: 'STATUS_FLOAT_INVALID_OPERATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2586,1): message : consulte a definição anterior de 'STATUS_FLOAT_INVALID_OPERATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3362,1): warning C4005: 'STATUS_FLOAT_OVERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2587,1): message : consulte a definição anterior de 'STATUS_FLOAT_OVERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3372,1): warning C4005: 'STATUS_FLOAT_STACK_CHECK': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2588,1): message : consulte a definição anterior de 'STATUS_FLOAT_STACK_CHECK'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3382,1): warning C4005: 'STATUS_FLOAT_UNDERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2589,1): message : consulte a definição anterior de 'STATUS_FLOAT_UNDERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3392,1): warning C4005: 'STATUS_INTEGER_DIVIDE_BY_ZERO': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2590,1): message : consulte a definição anterior de 'STATUS_INTEGER_DIVIDE_BY_ZERO'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3402,1): warning C4005: 'STATUS_INTEGER_OVERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2591,1): message : consulte a definição anterior de 'STATUS_INTEGER_OVERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(3412,1): warning C4005: 'STATUS_PRIVILEGED_INSTRUCTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2592,1): message : consulte a definição anterior de 'STATUS_PRIVILEGED_INSTRUCTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4358,1): warning C4005: 'STATUS_STACK_OVERFLOW': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2593,1): message : consulte a definição anterior de 'STATUS_STACK_OVERFLOW'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4875,1): warning C4005: 'STATUS_DLL_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2594,1): message : consulte a definição anterior de 'STATUS_DLL_NOT_FOUND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4904,1): warning C4005: 'STATUS_ORDINAL_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2595,1): message : consulte a definição anterior de 'STATUS_ORDINAL_NOT_FOUND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4914,1): warning C4005: 'STATUS_ENTRYPOINT_NOT_FOUND': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2596,1): message : consulte a definição anterior de 'STATUS_ENTRYPOINT_NOT_FOUND'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(4924,1): warning C4005: 'STATUS_CONTROL_C_EXIT': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2597,1): message : consulte a definição anterior de 'STATUS_CONTROL_C_EXIT'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(5002,1): warning C4005: 'STATUS_DLL_INIT_FAILED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2598,1): message : consulte a definição anterior de 'STATUS_DLL_INIT_FAILED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(5999,1): warning C4005: 'STATUS_CONTROL_STACK_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2599,1): message : consulte a definição anterior de 'STATUS_CONTROL_STACK_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(7593,1): warning C4005: 'STATUS_FLOAT_MULTIPLE_FAULTS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2600,1): message : consulte a definição anterior de 'STATUS_FLOAT_MULTIPLE_FAULTS'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(7603,1): warning C4005: 'STATUS_FLOAT_MULTIPLE_TRAPS': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2601,1): message : consulte a definição anterior de 'STATUS_FLOAT_MULTIPLE_TRAPS'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(7735,1): warning C4005: 'STATUS_REG_NAT_CONSUMPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2602,1): message : consulte a definição anterior de 'STATUS_REG_NAT_CONSUMPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(8718,1): warning C4005: 'STATUS_HEAP_CORRUPTION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2603,1): message : consulte a definição anterior de 'STATUS_HEAP_CORRUPTION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(8946,1): warning C4005: 'STATUS_STACK_BUFFER_OVERRUN': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2604,1): message : consulte a definição anterior de 'STATUS_STACK_BUFFER_OVERRUN'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(9073,1): warning C4005: 'STATUS_INVALID_CRUNTIME_PARAMETER': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2605,1): message : consulte a definição anterior de 'STATUS_INVALID_CRUNTIME_PARAMETER'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(9136,1): warning C4005: 'STATUS_ASSERTION_FAILURE': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2606,1): message : consulte a definição anterior de 'STATUS_ASSERTION_FAILURE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(10045,1): warning C4005: 'STATUS_ENCLAVE_VIOLATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2607,1): message : consulte a definição anterior de 'STATUS_ENCLAVE_VIOLATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(10697,1): warning C4005: 'STATUS_INTERRUPTED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2608,1): message : consulte a definição anterior de 'STATUS_INTERRUPTED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(10706,1): warning C4005: 'STATUS_THREAD_NOT_RUNNING': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2609,1): message : consulte a definição anterior de 'STATUS_THREAD_NOT_RUNNING'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(11018,1): warning C4005: 'STATUS_ALREADY_REGISTERED': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2610,1): message : consulte a definição anterior de 'STATUS_ALREADY_REGISTERED'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(14865,1): warning C4005: 'STATUS_SXS_EARLY_DEACTIVATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2612,1): message : consulte a definição anterior de 'STATUS_SXS_EARLY_DEACTIVATION'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(14874,1): warning C4005: 'STATUS_SXS_INVALID_DEACTIVATION': redefinição de macro
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2613,1): message : consulte a definição anterior de 'STATUS_SXS_INVALID_DEACTIVATION'
+  filler.cpp
+  ntapi.cpp
+  pe_header.cpp
+  remap.cpp
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\remap.cpp(72,80): warning C4390: ';': instrução controlada vazia encontrada; é esta a intenção?
+  selfcode.cpp
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\selfcode.cpp(58,95): warning C4390: ';': instrução controlada vazia encontrada; é esta a intenção?
+  Gerando Código...
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\selfcode.cpp(114): warning C4715: 'selfcode': nem todos os caminhos de controle retornam um valor
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(81): warning C4715: 'Gui::Initialize': nem todos os caminhos de controle retornam um valor
+  ImGui.vcxproj -> C:\xampp\htdocs\BypassDx11\C++\release\Dx11.exe

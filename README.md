@@ -30,6 +30,7 @@
 - Adicionado WebHooks de seguranca(Login, Tentativa de login, Cadastro, Infos PC, Tentativa de crack)
 - Gerador de keys
 - Adicionado mais funcoes nos webhooks de seguranca
+- Adicionado encriptadores, killprocess, antidumper (AntiCrack)
 
 ## 📄 Licença
 

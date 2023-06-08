@@ -23,6 +23,7 @@
 #include "func/getHwid.h"
 #include "func/getIp.h"
 #include "func/getInfo.h"
+#include "protect/protectmain.h"
 
 // Cabecalhos Imgui
 #include "main.hpp"

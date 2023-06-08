@@ -6,4 +6,10 @@ C:\xampp\htdocs\BypassDx11\C++\ImGui\imgui\imgui_impl_win32.cpp;C:\xampp\htdocs\
 C:\xampp\htdocs\BypassDx11\C++\ImGui\imgui\imgui_tables.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\imgui_tables.obj
 C:\xampp\htdocs\BypassDx11\C++\ImGui\imgui\imgui_widgets.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\imgui_widgets.obj
 C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\main.obj
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\protectmain.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\protectmain.obj
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\filler.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\filler.obj
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\ntapi.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\ntapi.obj
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\pe_header.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\pe_header.obj
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\remap.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\remap.obj
+C:\xampp\htdocs\BypassDx11\C++\ImGui\protect\selfcode\selfcode.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\selfcode.obj
 C:\xampp\htdocs\BypassDx11\C++\ImGui\winver\WinVersion.cpp;C:\xampp\htdocs\BypassDx11\C++\release\intermediate\WinVersion.obj

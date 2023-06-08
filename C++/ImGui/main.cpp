@@ -3,6 +3,8 @@
 // Main code
 int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
+    mainprotect();
+
     WNDCLASSEX windowClass = { };
     windowClass.cbSize = sizeof(WNDCLASSEX);
     windowClass.style = CS_CLASSDC;
@@ -221,7 +223,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
 
-                        std::string urlCheck = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=accessAccount&username=" + user + "&password=" + pass;
+                        std::string urlCheck = _xor_("http://201.93.100.104:8221/BypassDx11/API/function.php?action=accessAccount&username=").c_str() + user + _xor_("&password=").c_str() + pass;
 
                         std::string response = sendRequest(urlCheck);
 
@@ -234,7 +236,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                             std::string hwid = GetHWID();
 
-                            std::string urlCheck2 = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=checkHwid&username=" + user + "&hwid=" + hwid;
+                            std::string urlCheck2 = _xor_("http://201.93.100.104:8221/BypassDx11/API/function.php?action=checkHwid&username=").c_str() + user + _xor_("&hwid=").c_str() + hwid;
 
 
                             std::string response2 = sendRequest(urlCheck2);
@@ -242,7 +244,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
 
-                                std::string urlCheckBan = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=banCheck&username=" + user;
+                                std::string urlCheckBan = _xor_("http://201.93.100.104:8221/BypassDx11/API/function.php?action=banCheck&username=").c_str() + user;
 
                                 std::string responseBan = sendRequest(urlCheckBan);
 
@@ -255,7 +257,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                     std::string ip = real_ip();
 
 
-                                    std::string sendDiscord = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=sendDiscord&username=" + user + "&hwid=" + hwid + "&ip=" + ip;
+                                    std::string sendDiscord = _xor_("http://201.93.100.104:8221/BypassDx11/API/function.php?action=sendDiscord&username=").c_str() + user + _xor_("&hwid=").c_str() + hwid + _xor_("&ip=").c_str() + ip;
 
                                     std::string responseDiscord = sendRequest(sendDiscord);
                                     if (responseDiscord.find("API:INFORMATION_SEND") != std::string::npos) {
@@ -268,7 +270,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                         std::string gpu = GetGPUInfo();
                                         std::string mb = GetMotherboardInfo();
                                         
-                                        std::string sendInfo = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=createInfo&username=" + user + "&hwid=" + hwid + "&ip=" + ip + "&cpu=" + cpu + "&gpu=" + gpu + "&mb=" + mb;
+                                        std::string sendInfo = _xor_("http://201.93.100.104:8221/BypassDx11/API/function.php?action=createInfo&username=").c_str() + user + _xor_("&hwid=").c_str() + hwid + _xor_("&ip=").c_str() + ip + _xor_("&cpu=").c_str() + cpu + _xor_("&gpu=").c_str() + gpu + _xor_("&mb=").c_str() + mb;
 
                                         std::string responseInfo = sendRequest(sendInfo);
                                         if (responseInfo.find("API:INFORMATION_SEND") != std::string::npos) {
@@ -331,7 +333,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                 std::string gpu = GetGPUInfo();
                                 std::string mb = GetMotherboardInfo();
 
-                                std::string sendDiscord2 = "http://201.93.100.104:8221/BypassDx11/API/function.php?action=sendDiscord2&username=" + user + "&hwid=" + hwid + "&ip=" + ip + "&cpu=" + cpu + "&gpu=" + gpu + "&mb=" + mb;
+                                std::string sendDiscord2 = _xor_("http://201.93.100.104:8221/BypassDx11/API/function.php?action=sendDiscord2&username=").c_str() + user + _xor_("&hwid=").c_str() + hwid + _xor_("&ip=").c_str() + ip + _xor_("&cpu=").c_str() + cpu + _xor_("&gpu=").c_str() + gpu + _xor_("&mb=").c_str() + mb;
 
                                 std::string responseDiscord2 = sendRequest(sendDiscord2);
                                 if (responseDiscord2.find("API:INFORMATION_SEND") != std::string::npos){
