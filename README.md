@@ -21,11 +21,14 @@
 
 ## 🔜 Em Breve
 
-- ImGui para melhor visualizaçao
+- Site
+- Gerador de keys
 
 ## 🔄 Atualizações
 
 - Otimizaçoes no loader
+- Adicionado Imgui
+- Adicionado WebHooks de seguranca(Login, Tentativa de login, Cadastro, Infos PC, Tentativa de crack)
 
 ## 📄 Licença
 
