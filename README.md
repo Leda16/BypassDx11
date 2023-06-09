@@ -32,6 +32,7 @@
 - Adicionado mais funcoes nos webhooks de seguranca
 - Adicionado encriptadores, killprocess, antidumper (AntiCrack)
 - Adicionado animacoes
+- Adicionado status do loader em tempo real
 
 ## 📄 Licença
 

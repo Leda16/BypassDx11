@@ -56,6 +56,9 @@
     <ClCompile Include="winver\WinVersion.cpp">
       <Filter>External Files\WinVer</Filter>
     </ClCompile>
+    <ClCompile Include="protect\protectmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="protect\selfcode\filler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -71,7 +74,7 @@
     <ClCompile Include="protect\selfcode\selfcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="protect\protectmain.cpp">
+    <ClCompile Include="antidebugger\koruma.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -135,8 +138,6 @@
     <ClInclude Include="includes.h" />
     <ClInclude Include="func\changeName.h" />
     <ClInclude Include="func\createColor.h" />
-    <ClInclude Include="func\createConnection.h" />
-    <ClInclude Include="func\createDownload.h" />
     <ClInclude Include="func\createNetwork.h" />
     <ClInclude Include="func\getHwid.h" />
     <ClInclude Include="func\getIP.h" />
@@ -146,6 +147,9 @@
     <ClInclude Include="misc\includes.h" />
     <ClInclude Include="misc\lazy.h" />
     <ClInclude Include="misc\process.hpp" />
+    <ClInclude Include="protect\killprocess.h" />
+    <ClInclude Include="protect\protectmain.h" />
+    <ClInclude Include="addons\IconsFontAwesome5.h" />
     <ClInclude Include="protect\selfcode\filler.h" />
     <ClInclude Include="protect\selfcode\ntapi.h" />
     <ClInclude Include="protect\selfcode\pe_header.h" />
@@ -154,7 +158,8 @@
     <ClInclude Include="protect\anti_attach.h" />
     <ClInclude Include="protect\anti_debugger.h" />
     <ClInclude Include="protect\anti_dump.h" />
-    <ClInclude Include="protect\killprocess.h" />
-    <ClInclude Include="protect\protectmain.h" />
+    <ClInclude Include="antidebugger\include.h" />
+    <ClInclude Include="antidebugger\junk.h" />
+    <ClInclude Include="antidebugger\koruma.h" />
   </ItemGroup>
 </Project>

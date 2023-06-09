@@ -63,7 +63,6 @@ class Login{
         return $result ? $result["isBanned"] : false;
     }
 
-
     public function registerUser($username, $password, $repassword, $registerkey){
         if(empty($username) ||empty($password) || empty($repassword) || empty($registerkey)) return "API:MISSING_PARAMETERS";
         if(strlen($username) > 20 || strlen($username) < 3) return "API:USERNAME_TOO_SHORT";

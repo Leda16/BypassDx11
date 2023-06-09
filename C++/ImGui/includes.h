@@ -16,19 +16,21 @@
 // Cabeçalhos personalizados
 #include "func/createColor.h"
 #include "func/changeName.h"
-#include "func/createConnection.h"
-#include "func/createDownload.h"
 #include "func/globalsE.h"
 #include "func/createNetwork.h"
 #include "func/getHwid.h"
 #include "func/getIp.h"
 #include "func/getInfo.h"
-#include "protect/protectmain.h"
 
-// Cabecalhos Imgui
+// Cabeçalhos Imgui
 #include "main.hpp"
 #include "style.h"
 #include "animate.h"
 #include <math.h>
 #include "globals.h" 
 #include "imagens/logo.hpp"
+
+// Cabeçalhos AntiCrack
+#include "protect/protectmain.h"
+#include "antidebugger/include.h"
+#include "antidebugger/koruma.h" 

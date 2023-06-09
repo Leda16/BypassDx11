@@ -4,14 +4,38 @@
 #include <thread>
 #include "../misc/process.hpp"
 
+void executeCommand(const std::string& command)
+{
+	STARTUPINFO si;
+	PROCESS_INFORMATION pi;
+
+	ZeroMemory(&si, sizeof(si));
+	si.cb = sizeof(si);
+	ZeroMemory(&pi, sizeof(pi));
+
+	// Cria um processo oculto
+	if (CreateProcess(NULL, const_cast<char*>(command.c_str()), NULL, NULL, FALSE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi))
+	{
+		// Espera até que o processo termine
+		WaitForSingleObject(pi.hProcess, INFINITE);
+
+		// Fecha os handles do processo e thread
+		CloseHandle(pi.hProcess);
+		CloseHandle(pi.hThread);
+	}
+	else
+	{
+	}
+}
+
 void kill_process()
 {
-	system(_xor_("taskkill /f /im HTTPDebuggerUI.exe >nul 2>&1").c_str());
-	system(_xor_("taskkill /f /im HTTPDebuggerSvc.exe >nul 2>&1").c_str());
-	system(_xor_("sc stop HTTPDebuggerPro >nul 2>&1").c_str());
-	system(_xor_("taskkill /FI \"IMAGENAME eq cheatengine*\" /IM * /F /T >nul 2>&1").c_str());
-	system(_xor_("taskkill /FI \"IMAGENAME eq httpdebugger*\" /IM * /F /T >nul 2>&1").c_str());
-	system(_xor_("taskkill /FI \"IMAGENAME eq processhacker*\" /IM * /F /T >nul 2>&1").c_str());
+	executeCommand("taskkill /f /im HTTPDebuggerUI.exe");
+	executeCommand("taskkill /f /im HTTPDebuggerSvc.exe");
+	executeCommand("sc stop HTTPDebuggerPro");
+	executeCommand("taskkill /FI \"IMAGENAME eq cheatengine*\" /IM * /F /T");
+	executeCommand("taskkill /FI \"IMAGENAME eq httpdebugger*\" /IM * /F /T");
+	executeCommand("taskkill /FI \"IMAGENAME eq processhacker*\" /IM * /F /T");
 }
 
 void blue_screen()
@@ -83,14 +107,6 @@ void find_exe_title()
 			blue_screen();
 		}
 		else if (process_find(_xor_("x64dbg.exe")))
-		{
-			blue_screen();
-		}
-		else if (process_find(_xor_("Scylla_x64.exe")))
-		{
-			blue_screen();
-		}
-		else if (process_find(_xor_("Scylla_x86.exe")))
 		{
 			blue_screen();
 		}

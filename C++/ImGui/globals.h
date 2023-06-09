@@ -8,9 +8,10 @@
 
 	std::string user, pass;
 
-	bool login = true;
+	bool login = false;
 	bool menu = false;
 	bool hwidBan = false;
 	bool loaderBan = false;
 	bool invalidLogin = false;
-
+	bool apiError = false;
+	bool error = false;

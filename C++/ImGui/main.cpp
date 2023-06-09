@@ -30,6 +30,7 @@ bool IsProcessRunning(const std::string& processName) {
 int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
     mainprotect();
+    genelkoruma();
 
     WNDCLASSEX windowClass = { };
     windowClass.cbSize = sizeof(WNDCLASSEX);
@@ -199,7 +200,77 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 ImVec2 windowSize = ImGui::GetWindowSize();
                 ImVec2 windowPos = ImGui::GetWindowPos();
 
+                std::string urlCheckSt = "http://201.93.100.104:8221/BypassDx11/API/status.php";
 
+                std::string responseSt = sendRequest(urlCheckSt);
+
+                if (responseSt.find("API:LOADER_ONLINE") != std::string::npos) {
+                    login = true;
+                    error = false;
+                }
+                else if (responseSt.find("API:LOADER_OFFLINE") != std::string::npos) {
+                    login = false;
+                    error = true;
+                }
+                else {
+
+                }
+
+                if (error) {
+
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        exit(0);
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Try again later").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Try again later", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("LOADER IN UPDATE").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("LOADER IN UPDATE", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
+
+                }
 
                 if (login) {
 
@@ -207,6 +278,22 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        exit(0);
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
 
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]); // define a fonte para "MinhaFonte"
 
@@ -269,11 +356,6 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         std::string response = sendRequest(urlCheck);
 
                         if (response.find("LOGIN_GOOD:LOGGED_IN") != std::string::npos) {
-                            userFound = true;
-
-
-
-                            std::cout << std::endl;
 
                             std::string hwid = GetHWID();
 
@@ -292,7 +374,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                 if (responseBan.find("API:USER_NOT_BANNED") != std::string::npos) {
 
 
-                                    std::cout << std::endl;
+                                    
 
                                     std::string hwid = GetHWID();
                                     std::string ip = real_ip();
@@ -324,38 +406,34 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                                         }
                                         else if (responseInfo.find("API:MISSING_PARAMETERS") != std::string::npos) {
-
-                                            std::cout << std::endl;
+                                            login = false;
+                                            apiError = true;
                                         }
                                         else {
-
-                                            std::cout << std::endl;
+                                            login = false;
+                                            apiError = true;
                                         }
 
                                     }
                                     else if (responseDiscord.find("API:MISSING_PARAMETERS") != std::string::npos) {
-
-                                        std::cout << std::endl;
+                                        login = false;
+                                        apiError = true;
                                     }
                                     else {
-
-                                        std::cout << std::endl;
+                                        login = false;
+                                        apiError = true;
                                     }
-
-
-
 
                                 }
                                 else if (responseBan.find("API:USER_BANNED") != std::string::npos) {
                                     login = false;
                                     loaderBan = true;
 
-                                    std::cout << std::endl;
+                                    
                                 }
                                 else {
-
-
-                                    std::cout << std::endl;
+                                    login = false;
+                                    apiError = true;
                                 }
 
 
@@ -365,7 +443,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                 hwidBan = true;
                                 login = false;
 
-                                std::cout << std::endl;
+                                
 
                                 std::string hwid = GetHWID();
                                 std::string ip = real_ip();
@@ -379,19 +457,18 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                 if (responseDiscord2.find("API:INFORMATION_SEND") != std::string::npos){
                                 }
                                 else if (responseDiscord2.find("API:MISSING_PARAMETERS") != std::string::npos) {
-
-                                    std::cout << std::endl;
+                                    login = false;
+                                    apiError = true;
                                 }
                                 else {
-                                    MessageBox(NULL, "ERRO INTERNO...", "Erro", MB_OK | MB_ICONERROR);
-
-                                    std::cout << std::endl;
+                                    login = false;
+                                    apiError = true;
                                 }
                             
                             }
                             else {
-
-                                std::cout << std::endl;
+                                login = false;
+                                apiError = true;
                             }
 
                         }
@@ -400,10 +477,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                             invalidLogin = true;
                         }
                         else {
-
-                            MessageBox(NULL, "Erro API...", "Erro", MB_OK | MB_ICONERROR);
-
-                            std::cout << std::endl;
+                            login = false;
+                            apiError = true;
                         }
 
 
@@ -418,12 +493,16 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 if (menu) {
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
+
+
+
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
                     float textPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("LaBypass").x) / 1.9;
                     float textPosY = windowPos.y + windowSize.y / 5;
                     ImGui::SetCursorPos({ textPosX, textPosY });
                     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
                     ImGui::Text("LaBypass", 6.5f);
+
                     ImGui::PopStyleColor();
                     ImGui::PopFont(); 
 
@@ -460,6 +539,23 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        hwidBan = false;
+                        login = true;
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
 
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
 
@@ -499,6 +595,23 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 {
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        loaderBan = false;
+                        login = true;
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
 
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
 
@@ -538,6 +651,23 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 {
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        invalidLogin = false;
+                        login = true;
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
 
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
 
@@ -573,7 +703,60 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     ImGui::Dummy(ImVec2(0.0f, spinnerSize));
                 }
 
+                if (apiError) {
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        apiError = false;
+                        login = true;
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Try again").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Try again", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("API ERROR").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("API ERROR", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
+                }
 
                 ImGui::End();
 

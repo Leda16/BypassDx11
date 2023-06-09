@@ -6,6 +6,3 @@ namespace fs = std::filesystem;
 #pragma comment(lib, "ntdll.lib")
 
 int opcao;
-int maxTries = 2;
-int numTries = 0;
-bool userFound = false;

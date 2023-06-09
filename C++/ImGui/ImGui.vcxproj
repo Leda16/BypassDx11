@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="antidebugger\koruma.cpp" />
     <ClCompile Include="imgui\imgui.cpp" />
     <ClCompile Include="imgui\imgui_demo.cpp" />
     <ClCompile Include="imgui\imgui_draw.cpp" />
@@ -176,8 +177,12 @@
     <ClCompile Include="winver\WinVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="addons\IconsFontAwesome5.h" />
     <ClInclude Include="addons\imspinner.h" />
     <ClInclude Include="animate.h" />
+    <ClInclude Include="antidebugger\include.h" />
+    <ClInclude Include="antidebugger\junk.h" />
+    <ClInclude Include="antidebugger\koruma.h" />
     <ClInclude Include="encryption\xor.h" />
     <ClInclude Include="font\IconsFontAwesome6.h" />
     <ClInclude Include="font\IconsFontAwesome6Brands.h" />
@@ -186,8 +191,6 @@
     <ClInclude Include="font\trebucbd.h" />
     <ClInclude Include="func\changeName.h" />
     <ClInclude Include="func\createColor.h" />
-    <ClInclude Include="func\createConnection.h" />
-    <ClInclude Include="func\createDownload.h" />
     <ClInclude Include="func\createNetwork.h" />
     <ClInclude Include="func\getHwid.h" />
     <ClInclude Include="func\getInfo.h" />
