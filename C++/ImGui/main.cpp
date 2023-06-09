@@ -200,7 +200,10 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 ImVec2 windowPos = ImGui::GetWindowPos();
 
 
+
                 if (login) {
+
+
 
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
@@ -255,6 +258,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     ImGui::SetCursorPos({ buttonPosX, buttonPosY });
 
                     ButtonAnimations::HoverAnimation(10.0f);
+
+
 
                     if (ImGui::Button("Login", ImVec2(260, 0)))
                     {
@@ -319,24 +324,20 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                                         }
                                         else if (responseInfo.find("API:MISSING_PARAMETERS") != std::string::npos) {
-                                            MessageBox(NULL, "ERRO...", "Erro", MB_OK | MB_ICONERROR);
 
                                             std::cout << std::endl;
                                         }
                                         else {
-                                            MessageBox(NULL, "ERRO INTERNO...", "Erro", MB_OK | MB_ICONERROR);
 
                                             std::cout << std::endl;
                                         }
 
                                     }
                                     else if (responseDiscord.find("API:MISSING_PARAMETERS") != std::string::npos) {
-                                        MessageBox(NULL, "ERRO...", "Erro", MB_OK | MB_ICONERROR);
 
                                         std::cout << std::endl;
                                     }
                                     else {
-                                        MessageBox(NULL, "ERRO INTERNO...", "Erro", MB_OK | MB_ICONERROR);
 
                                         std::cout << std::endl;
                                     }
@@ -346,7 +347,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                                 }
                                 else if (responseBan.find("API:USER_BANNED") != std::string::npos) {
-                                    MessageBox(NULL, "BANIDO DO SISTEMA...", "Erro", MB_OK | MB_ICONERROR);
+                                    login = false;
+                                    loaderBan = true;
 
                                     std::cout << std::endl;
                                 }
@@ -358,8 +360,10 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
                             }
-                            else if (response2.find("API:HWID_CHANGE") != std::string::npos) {
-                                MessageBox(NULL, "HWID TROCADO...", "Erro", MB_OK | MB_ICONERROR);
+                            else if (response2.find("API:HWID_CHANGE") != std::string::npos) { 
+
+                                hwidBan = true;
+                                login = false;
 
                                 std::cout << std::endl;
 
@@ -392,8 +396,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                         }
                         else if (response.find("API:INVALID_CREDENTIALS") != std::string::npos) {
-                            MessageBox(NULL, "Login errado...", "Erro", MB_OK | MB_ICONERROR);
-
+                            login = false;
+                            invalidLogin = true;
                         }
                         else {
 
@@ -406,6 +410,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     }
                     MyStyles::PopStyleVars(2);
                     MyStyles::PopStyleColor(6);
+
                 }
 
 
@@ -448,6 +453,128 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     MyStyles::PopStyleVars(2);
                     MyStyles::PopStyleColor(6);
                 }
+
+                if (hwidBan)
+                {
+
+
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Open ticket").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Open ticket", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("HWID BAN").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("HWID BAN", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
+                }
+
+                if (loaderBan)
+                {
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Open ticket").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Open ticket", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("USER BAN").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("USER BAN", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
+                }
+
+                if (invalidLogin)
+                {
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Try again").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Try again", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("USER WRONG").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("USER WRONG", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
+                }
+
+
+
                 ImGui::End();
 
             }

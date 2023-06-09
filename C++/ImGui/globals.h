@@ -10,3 +10,7 @@
 
 	bool login = true;
 	bool menu = false;
+	bool hwidBan = false;
+	bool loaderBan = false;
+	bool invalidLogin = false;
+

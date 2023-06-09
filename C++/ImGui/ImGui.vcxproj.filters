@@ -156,7 +156,5 @@
     <ClInclude Include="protect\anti_dump.h" />
     <ClInclude Include="protect\killprocess.h" />
     <ClInclude Include="protect\protectmain.h" />
-    <ClInclude Include="encryption\obfuscator.hpp" />
-    <ClInclude Include="encryption\meta_random.hpp" />
   </ItemGroup>
 </Project>
