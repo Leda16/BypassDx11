@@ -33,6 +33,7 @@
 - Adicionado encriptadores, killprocess, antidumper (AntiCrack)
 - Adicionado animacoes
 - Adicionado status do loader em tempo real
+- Adicionado MultiCheat selector
 
 ## 📄 Licença
 
