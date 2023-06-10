@@ -555,11 +555,11 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     float buttonHeight = 40.0f; 
                     float buttonMargin = 30.0f;
 
-                    
-                    float buttonPosX = windowPos.x + buttonMargin;
-
-                    
+                    float buttonPosX = windowPos.x + buttonMargin;                    
                     float buttonPosY = windowPos.y + (windowSize.y - buttonHeight) / 2.0f;
+
+                    float skriptImageAlpha = skript ? 1.0f : 0.0f;
+                    float projectImageAlpha = project ? 1.0f : 0.0f;
 
                     ImGui::SetCursorPos({ buttonPosX, buttonPosY });
 
@@ -574,10 +574,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         }
                     }
 
-
-
                     float button2PosX = windowPos.x + windowSize.x - buttonWidth - buttonMargin;
-
                     float button2PosY = windowPos.y + (windowSize.y - buttonHeight) / 2.0f;
 
                     ImGui::SetCursorPos({ button2PosX, button2PosY });
@@ -593,6 +590,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         }
                     }
 
+
                     ImGui::PopStyleColor();
 
                     if (skript) {
@@ -603,11 +601,17 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         ImGui::Text("Skript", 6.5f);
                         ImGui::PopStyleColor();
                         ImGui::PopFont();
-                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2;
+                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2 + (1.0f - skriptImageAlpha) * windowSize.x;
                         float imagePosY = windowPos.y + (windowSize.y - 130) / 2;
                         ImGui::SetCursorPos({ imagePosX, imagePosY });
+                        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, skriptImageAlpha / 255.0f));
                         ImGui::Image((void*)Gui::ImageResource3, Gui::SizeBanner);
+                        ImGui::PopStyleColor();
 
+                        ImVec2 rectMin = ImGui::GetItemRectMin();
+                        ImVec2 rectMax = ImGui::GetItemRectMax();
+                        float rounding = 5.0f;
+                        ImGui::GetWindowDrawList()->AddRect(rectMin, rectMax, ImColor(1.0f, 0.0f, 0.0f), rounding, ImDrawCornerFlags_All, 3.0f);
                     }
 
                     if (project) {
@@ -618,10 +622,17 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         ImGui::Text("Project Cheats", 6.5f);
                         ImGui::PopStyleColor();
                         ImGui::PopFont();
-                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2;
+                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2 - projectImageAlpha * windowSize.x;
                         float imagePosY = windowPos.y + (windowSize.y - 130) / 2;
                         ImGui::SetCursorPos({ imagePosX, imagePosY });
+                        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, projectImageAlpha / 255.0f));
                         ImGui::Image((void*)Gui::ImageResource2, Gui::SizeBanner);
+                        ImGui::PopStyleColor();
+
+                        ImVec2 rectMin = ImGui::GetItemRectMin();
+                        ImVec2 rectMax = ImGui::GetItemRectMax();
+                        float rounding = 5.0f;
+                        ImGui::GetWindowDrawList()->AddRect(rectMin, rectMax, ImColor(1.0f, 0.0f, 0.0f), rounding, ImDrawCornerFlags_All, 3.0f);
                     }
                 }
 

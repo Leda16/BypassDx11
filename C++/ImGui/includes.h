@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <filesystem>
+#include <cmath>
 
 // Cabeçalhos do Windows
 #include <Windows.h>
