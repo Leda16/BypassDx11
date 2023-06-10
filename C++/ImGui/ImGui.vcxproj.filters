@@ -161,5 +161,7 @@
     <ClInclude Include="antidebugger\include.h" />
     <ClInclude Include="antidebugger\junk.h" />
     <ClInclude Include="antidebugger\koruma.h" />
+    <ClInclude Include="imagens\project.hpp" />
+    <ClInclude Include="imagens\skript.hpp" />
   </ItemGroup>
 </Project>

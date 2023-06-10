@@ -197,6 +197,8 @@
     <ClInclude Include="func\getIP.h" />
     <ClInclude Include="func\globalsE.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="imagens\project.hpp" />
+    <ClInclude Include="imagens\skript.hpp" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_dx11.h" />

@@ -29,6 +29,9 @@
 #include "winver/WinVersion.h"
 
 #include "imagens/logo.hpp"
+#include "imagens/project.hpp"
+#include "imagens/skript.hpp"
+
 
 VersionInfo info;
 
@@ -63,8 +66,11 @@ namespace Gui
     static ImVec2					Size = { 400 , 350 };
 
     inline ID3D11ShaderResourceView* ImageResource = nullptr;
+    inline ID3D11ShaderResourceView* ImageResource2 = nullptr;
+    inline ID3D11ShaderResourceView* ImageResource3 = nullptr;
 
     static ImVec2 SizeImage = { 40, 40 };
+    static ImVec2 SizeBanner = { 250, 130 };
 
     bool LoadImageByMemory(ID3D11Device* device, unsigned char* image, size_t image_size, ID3D11ShaderResourceView** result)
     {
@@ -79,6 +85,11 @@ namespace Gui
         bool result = LoadImageByMemory(device, La_Logo, sizeof(La_Logo), &ImageResource);
         if (!result)
             return false;
+
+        bool result2 = LoadImageByMemory(device, Project_Logo, sizeof(Project_Logo), &ImageResource2);
+        bool result3 = LoadImageByMemory(device, Skript_Logo, sizeof(Skript_Logo), &ImageResource3);
+
+        return (result2 && result3);
     }
 
 }

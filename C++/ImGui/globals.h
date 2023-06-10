@@ -15,3 +15,5 @@
 	bool invalidLogin = false;
 	bool apiError = false;
 	bool error = false;
+	bool skript = true;
+	bool project = false;

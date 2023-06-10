@@ -60,10 +60,10 @@ C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d10.h(608,1): warning C4005
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58146,1): message : consulte a definição anterior de 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
 C:\xampp\htdocs\BypassDx11\C++\ImGui\dxsdk\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': redefinição de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\winerror.h(58155,1): message : consulte a definição anterior de 'D3D10_ERROR_FILE_NOT_FOUND'
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(92,117): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(92,104): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(92,68): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(92,34): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(103,117): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(103,104): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(103,68): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(103,34): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(66,1): warning C4005: 'STATUS_WAIT_0': redefinição de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2549,1): message : consulte a definição anterior de 'STATUS_WAIT_0'
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(223,1): warning C4005: 'STATUS_ABANDONED_WAIT_0': redefinição de macro
@@ -192,27 +192,27 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(14
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2612,1): message : consulte a definição anterior de 'STATUS_SXS_EARLY_DEACTIVATION'
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\ntstatus.h(14874,1): warning C4005: 'STATUS_SXS_INVALID_DEACTIVATION': redefinição de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winnt.h(2613,1): message : consulte a definição anterior de 'STATUS_SXS_INVALID_DEACTIVATION'
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(52,242): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(52,229): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(52,199): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(52,142): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(225,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(242,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(283,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(300,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(312,36): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(343,38): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(500,36): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(510,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(522,38): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(544,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(562,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(600,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(618,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(656,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(674,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(711,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(729,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(60,11): warning C4101: 'mouse': variável local não referenciada
-C:\xampp\htdocs\BypassDx11\C++\ImGui\main.hpp(82): warning C4715: 'Gui::Initialize': nem todos os caminhos de controle retornam um valor
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(75,242): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(75,229): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(75,199): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(75,142): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(241,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(258,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(299,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(316,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(328,36): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(359,38): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(515,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(531,36): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(599,41): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(614,41): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(636,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(654,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(692,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(710,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(748,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(766,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(803,39): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(821,37): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\xampp\htdocs\BypassDx11\C++\ImGui\main.cpp(83,11): warning C4101: 'mouse': variável local não referenciada
   ImGui.vcxproj -> C:\xampp\htdocs\BypassDx11\C++\release\Dx11.exe

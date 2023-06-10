@@ -26,6 +26,29 @@ bool IsProcessRunning(const std::string& processName) {
     return false;
 }
 
+void checkStatus() {
+    static bool executado = false;
+
+    if (!executado) {
+        std::string urlCheckSt = "http://201.93.100.104:8221/BypassDx11/API/status.php";
+
+        std::string responseSt = sendRequest(urlCheckSt);
+
+        if (responseSt.find("API:LOADER_ONLINE") != std::string::npos) {
+            login = true;
+            error = false;
+        }
+        else if (responseSt.find("API:LOADER_OFFLINE") != std::string::npos) {
+            login = false;
+            error = true;
+        }
+        else {
+
+        }
+    }
+
+}
+
 // Main code
 int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
@@ -144,6 +167,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
     // Main loop
     bool loaderOpen = true;
 
+    checkStatus();
+
     std::string processName = "sigverif.exe";
     bool isRunning = IsProcessRunning(processName);
 
@@ -200,25 +225,16 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 ImVec2 windowSize = ImGui::GetWindowSize();
                 ImVec2 windowPos = ImGui::GetWindowPos();
 
-                std::string urlCheckSt = "http://201.93.100.104:8221/BypassDx11/API/status.php";
 
-                std::string responseSt = sendRequest(urlCheckSt);
 
-                if (responseSt.find("API:LOADER_ONLINE") != std::string::npos) {
-                    login = true;
-                    error = false;
-                }
-                else if (responseSt.find("API:LOADER_OFFLINE") != std::string::npos) {
-                    login = false;
-                    error = true;
-                }
-                else {
 
-                }
+
 
                 if (error) {
 
+
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
 
                     MyStyles::ButtonStyle();
 
@@ -426,8 +442,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                                 }
                                 else if (responseBan.find("API:USER_BANNED") != std::string::npos) {
-                                    login = false;
                                     loaderBan = true;
+                                    login = false;
 
                                     
                                 }
@@ -494,11 +510,26 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
 
+                    MyStyles::ButtonStyle();
 
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        exit(0);
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
 
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
-                    float textPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("LaBypass").x) / 1.9;
-                    float textPosY = windowPos.y + windowSize.y / 5;
+                    float textPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("LaBypass").x) / 2.0;
+                    float textPosY = windowPos.y + windowSize.y / 8;
                     ImGui::SetCursorPos({ textPosX, textPosY });
                     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
                     ImGui::Text("LaBypass", 6.5f);
@@ -506,31 +537,92 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     ImGui::PopStyleColor();
                     ImGui::PopFont(); 
 
-                    MyStyles::ButtonStyle();
-                    float buttonPos1X = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Inject").x) / 5.3;
-                    float buttonPos1Y = windowPos.y + windowSize.y / 3 + 50;
-                    ImGui::SetCursorPos({ buttonPos1X, buttonPos1Y });
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
 
-                    ButtonAnimations::HoverAnimation(10.0f);
 
-                    if (ImGui::Button("Inject", ImVec2(260, 0)))
-                    {
-                        MessageBox(NULL, "Inject", "Erro", MB_OK | MB_ICONERROR);
 
-                    }
+                    ImVec4 redColor(1.0f, 0.0f, 0.0f, 1.0f);  
+                    ImVec4 clearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
-                    float buttonPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Clean traces").x) / 4.4;
-                    float buttonPosY = windowPos.y + windowSize.y / 2 + 50;
+                    ImGuiStyle& style = ImGui::GetStyle();
+                    style.Colors[ImGuiCol_Button] = clearColor;
+                    style.Colors[ImGuiCol_ButtonHovered] = clearColor;
+                    style.Colors[ImGuiCol_ButtonActive] = clearColor;
+
+                    ImGui::PushStyleColor(ImGuiCol_Text, redColor);
+
+                    float buttonWidth = 40.0f;  
+                    float buttonHeight = 40.0f; 
+                    float buttonMargin = 30.0f;
+
+                    
+                    float buttonPosX = windowPos.x + buttonMargin;
+
+                    
+                    float buttonPosY = windowPos.y + (windowSize.y - buttonHeight) / 2.0f;
+
                     ImGui::SetCursorPos({ buttonPosX, buttonPosY });
 
-                    if (ImGui::Button("Clean traces", ImVec2(260, 0)))
-                    {
-                        MessageBox(NULL, "Traces Clean", "Erro", MB_OK | MB_ICONERROR);
+                    if (ImGui::Button("<", ImVec2(buttonWidth, buttonHeight))) {
+                        if (skript) {
+                            skript = false;
+                            project = true;
+                        }
+                        else {
+                            project = false;
+                            skript = true;
+                        }
+                    }
+
+
+
+                    float button2PosX = windowPos.x + windowSize.x - buttonWidth - buttonMargin;
+
+                    float button2PosY = windowPos.y + (windowSize.y - buttonHeight) / 2.0f;
+
+                    ImGui::SetCursorPos({ button2PosX, button2PosY });
+
+                    if (ImGui::Button(">", ImVec2(buttonWidth, buttonHeight))) {
+                        if (skript) {
+                            skript = false;
+                            project = true;
+                        }
+                        else {
+                            project = false;
+                            skript = true;
+                        }
+                    }
+
+                    ImGui::PopStyleColor();
+
+                    if (skript) {
+                        float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Skript").x) / 2.0;
+                        float text2PosY = windowPos.y + windowSize.y / 4;
+                        ImGui::SetCursorPos({ text2PosX, text2PosY });
+                        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                        ImGui::Text("Skript", 6.5f);
+                        ImGui::PopStyleColor();
+                        ImGui::PopFont();
+                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2;
+                        float imagePosY = windowPos.y + (windowSize.y - 130) / 2;
+                        ImGui::SetCursorPos({ imagePosX, imagePosY });
+                        ImGui::Image((void*)Gui::ImageResource3, Gui::SizeBanner);
 
                     }
 
-                    MyStyles::PopStyleVars(2);
-                    MyStyles::PopStyleColor(6);
+                    if (project) {
+                        float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Project Cheats").x) / 2.0;
+                        float text2PosY = windowPos.y + windowSize.y / 4;
+                        ImGui::SetCursorPos({ text2PosX, text2PosY });
+                        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                        ImGui::Text("Project Cheats", 6.5f);
+                        ImGui::PopStyleColor();
+                        ImGui::PopFont();
+                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2;
+                        float imagePosY = windowPos.y + (windowSize.y - 130) / 2;
+                        ImGui::SetCursorPos({ imagePosX, imagePosY });
+                        ImGui::Image((void*)Gui::ImageResource2, Gui::SizeBanner);
+                    }
                 }
 
                 if (hwidBan)
