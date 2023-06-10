@@ -5,7 +5,6 @@
 #include "imgui_impl_dx11.h"
 
 #include "addons/imspinner.h"
-#include "addons/IconsFontAwesome5.h"
 
 #include "font/IconsFontAwesome6Brands.h"
 #include "font/IconsFontAwesome6.h"

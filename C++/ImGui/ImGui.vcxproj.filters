@@ -149,7 +149,6 @@
     <ClInclude Include="misc\process.hpp" />
     <ClInclude Include="protect\killprocess.h" />
     <ClInclude Include="protect\protectmain.h" />
-    <ClInclude Include="addons\IconsFontAwesome5.h" />
     <ClInclude Include="protect\selfcode\filler.h" />
     <ClInclude Include="protect\selfcode\ntapi.h" />
     <ClInclude Include="protect\selfcode\pe_header.h" />

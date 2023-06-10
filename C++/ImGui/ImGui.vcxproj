@@ -177,7 +177,6 @@
     <ClCompile Include="winver\WinVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="addons\IconsFontAwesome5.h" />
     <ClInclude Include="addons\imspinner.h" />
     <ClInclude Include="animate.h" />
     <ClInclude Include="antidebugger\include.h" />
