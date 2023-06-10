@@ -558,9 +558,6 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     float buttonPosX = windowPos.x + buttonMargin;                    
                     float buttonPosY = windowPos.y + (windowSize.y - buttonHeight) / 2.0f;
 
-                    float skriptImageAlpha = skript ? 1.0f : 0.0f;
-                    float projectImageAlpha = project ? 1.0f : 0.0f;
-
                     ImGui::SetCursorPos({ buttonPosX, buttonPosY });
 
                     if (ImGui::Button("<", ImVec2(buttonWidth, buttonHeight))) {
@@ -601,17 +598,16 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         ImGui::Text("Skript", 6.5f);
                         ImGui::PopStyleColor();
                         ImGui::PopFont();
-                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2 + (1.0f - skriptImageAlpha) * windowSize.x;
+                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2;
                         float imagePosY = windowPos.y + (windowSize.y - 130) / 2;
                         ImGui::SetCursorPos({ imagePosX, imagePosY });
-                        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, skriptImageAlpha / 255.0f));
                         ImGui::Image((void*)Gui::ImageResource3, Gui::SizeBanner);
-                        ImGui::PopStyleColor();
 
                         ImVec2 rectMin = ImGui::GetItemRectMin();
                         ImVec2 rectMax = ImGui::GetItemRectMax();
                         float rounding = 5.0f;
                         ImGui::GetWindowDrawList()->AddRect(rectMin, rectMax, ImColor(1.0f, 0.0f, 0.0f), rounding, ImDrawCornerFlags_All, 3.0f);
+
                     }
 
                     if (project) {
@@ -622,18 +618,18 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         ImGui::Text("Project Cheats", 6.5f);
                         ImGui::PopStyleColor();
                         ImGui::PopFont();
-                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2 - projectImageAlpha * windowSize.x;
+                        float imagePosX = windowPos.x + (windowSize.x - 250) / 2;
                         float imagePosY = windowPos.y + (windowSize.y - 130) / 2;
                         ImGui::SetCursorPos({ imagePosX, imagePosY });
-                        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, projectImageAlpha / 255.0f));
                         ImGui::Image((void*)Gui::ImageResource2, Gui::SizeBanner);
-                        ImGui::PopStyleColor();
 
                         ImVec2 rectMin = ImGui::GetItemRectMin();
                         ImVec2 rectMax = ImGui::GetItemRectMax();
                         float rounding = 5.0f;
                         ImGui::GetWindowDrawList()->AddRect(rectMin, rectMax, ImColor(1.0f, 0.0f, 0.0f), rounding, ImDrawCornerFlags_All, 3.0f);
                     }
+
+
                 }
 
                 if (hwidBan)
