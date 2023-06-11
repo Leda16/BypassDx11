@@ -162,5 +162,6 @@
     <ClInclude Include="antidebugger\koruma.h" />
     <ClInclude Include="imagens\project.hpp" />
     <ClInclude Include="imagens\skript.hpp" />
+    <ClInclude Include="bypass\skript.h" />
   </ItemGroup>
 </Project>

@@ -182,6 +182,7 @@
     <ClInclude Include="antidebugger\include.h" />
     <ClInclude Include="antidebugger\junk.h" />
     <ClInclude Include="antidebugger\koruma.h" />
+    <ClInclude Include="bypass\skript.h" />
     <ClInclude Include="encryption\xor.h" />
     <ClInclude Include="font\IconsFontAwesome6.h" />
     <ClInclude Include="font\IconsFontAwesome6Brands.h" />

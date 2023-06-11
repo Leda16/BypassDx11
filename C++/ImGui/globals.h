@@ -17,3 +17,5 @@
 	bool error = false;
 	bool skript = true;
 	bool project = false;
+	bool injectS = false;
+	bool injectP = false;

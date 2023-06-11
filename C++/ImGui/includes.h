@@ -35,3 +35,6 @@
 #include "protect/protectmain.h"
 #include "antidebugger/include.h"
 #include "antidebugger/koruma.h" 
+
+// Cabeçalhos Bypass
+#include "bypass/skript.h"

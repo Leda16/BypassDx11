@@ -608,6 +608,23 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         float rounding = 5.0f;
                         ImGui::GetWindowDrawList()->AddRect(rectMin, rectMax, ImColor(1.0f, 0.0f, 0.0f), rounding, ImDrawCornerFlags_All, 3.0f);
 
+                        MyStyles::ButtonStyle();
+                        float buttonPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Injetar").x) / 4.5;
+                        float buttonPosY = imagePosY + 130.0f + 40.0f;
+                        ImGui::SetCursorPos({ buttonPosX, buttonPosY });
+
+                        ButtonAnimations::HoverAnimation(10.0f);
+
+
+
+                        if (ImGui::Button("Injetar", ImVec2(250, 0))) {
+                            injectS = true;
+                            menu = false;
+
+                        }
+
+                        MyStyles::PopStyleVars(2);
+                        MyStyles::PopStyleColor(6);
                     }
 
                     if (project) {
@@ -627,9 +644,140 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         ImVec2 rectMax = ImGui::GetItemRectMax();
                         float rounding = 5.0f;
                         ImGui::GetWindowDrawList()->AddRect(rectMin, rectMax, ImColor(1.0f, 0.0f, 0.0f), rounding, ImDrawCornerFlags_All, 3.0f);
+
+                        MyStyles::ButtonStyle();
+                        float buttonPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Injetar").x) / 4.5;
+                        float buttonPosY = imagePosY + 130.0f + 40.0f;
+                        ImGui::SetCursorPos({ buttonPosX, buttonPosY });
+
+                        ButtonAnimations::HoverAnimation(10.0f);
+
+
+
+                        if (ImGui::Button("Injetar", ImVec2(250, 0))) {
+                            injectP = true;
+                            menu = false;
+
+                        }
+
+                        MyStyles::PopStyleVars(2);
+                        MyStyles::PopStyleColor(6);
+
                     }
 
 
+                }
+
+                if (injectS) {
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        exit(0);
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Injecting...").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Injecting...", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("SKRIPT").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("SKRIPT", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
+
+                    std::thread actionsThread(ExecuteBypassSkript);
+
+                    actionsThread.detach();
+                }
+
+                if (injectP) {
+                    ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
+
+                    MyStyles::ButtonStyle();
+
+                    float buttonXPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize(ICON_FA_X).x) / 1.05;
+                    float buttonXPosY = windowPos.y + windowSize.y / 30;
+                    ImGui::SetCursorPos({ buttonXPosX, buttonXPosY });
+                    ImVec2 buttonSize(23.0f, 23.0f);
+
+                    ButtonAnimations::HoverAnimation(10.0f);
+
+                    if (ImGui::Button(ICON_FA_X, buttonSize))
+                    {
+                        exit(0);
+                    }
+
+                    MyStyles::PopStyleVars(2);
+                    MyStyles::PopStyleColor(6);
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
+
+                    float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Injecting...").x) / 2.0;
+                    float text2PosY = windowPos.y + windowSize.y / 8;
+                    ImGui::SetCursorPos({ text2PosX, text2PosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
+                    ImGui::Text("Injecting...", 6.5f);
+                    ImGui::PopStyleColor();
+                    ImGui::PopFont();
+
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
+
+                    float textWidth = ImGui::CalcTextSize("PROJECT").x;
+                    float textPosX = windowPos.x + (windowSize.x - textWidth) / 2.0f;
+                    float textPosY = windowPos.y + windowSize.y / 5.0f;
+                    ImGui::SetCursorPos({ textPosX, textPosY });
+                    ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 3.5f));
+                    ImGui::Text("PROJECT", 6.5f);
+                    ImGui::PopStyleColor();
+
+                    ImGui::PopFont();
+
+                    float spinnerSize = 50.0f;
+                    float spinnerPosX = windowPos.x + (windowSize.x - spinnerSize) / 2.4f;
+                    float spinnerPosY = windowPos.y + (windowSize.y - spinnerSize) / 1.7f - ImGui::GetTextLineHeightWithSpacing() * 1.5f;
+
+                    spinnerPosX += (spinnerSize / 2.0f) - ImGui::GetTextLineHeightWithSpacing();
+
+                    ImGui::SetCursorPos({ spinnerPosX, spinnerPosY });
+                    ImSpinner::SpinnerRainbow("Meu Spinner", spinnerSize, 2.0f, ImColor(1.0f, 0.0f, 0.0f), 1.0f);
+
+                    ImGui::Dummy(ImVec2(0.0f, spinnerSize));
                 }
 
                 if (hwidBan)
