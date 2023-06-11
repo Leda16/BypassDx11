@@ -28,6 +28,9 @@ switch($_GET["action"]){
     case "generateRegisterKey":
         $r = $login->generateRegisterKey($_GET["adminpassword"]);
         break;
+    case "generateRegisterKey2":
+        $r = $login->generateRegisterKey2($_GET["adminpassword"]);
+        break;
     default:
         $r = "LaSystem 1.0";
 }
@@ -35,6 +38,9 @@ switch($_GET["action"]){
 echo $r;
 
 class Login{
+
+    // Funcoes privadas
+
     private function query($sql, $arg, $fetch = false){
         require "connection.php";
         $q = $db->prepare($sql);
@@ -63,6 +69,39 @@ class Login{
         return $result ? $result["isBanned"] : false;
     }
 
+
+    private function checkAdminPassword($adminpassword) {
+        $result = $this->query("SELECT adminpassword FROM revendedor WHERE adminpassword = ?", array($adminpassword), true);
+        if ($result) {
+            return $result['adminpassword'];
+        } else {
+            return "API:INVALID_DEALER";
+        }
+    }
+
+    private function checkStatus($adminpassword) {
+        $result = $this->query("SELECT status FROM revendedor WHERE adminpassword = ?", array($adminpassword), true);
+        if ($result['status'] !== "activate") {
+            return "API:DEALER_OUT";
+        }
+    }
+
+    private function checkName($adminpassword) {
+        $result = $this->query("SELECT user FROM revendedor WHERE adminpassword = ?", array($adminpassword), true);
+        if ($result) {
+            return $result['user'];
+        }
+    }
+
+    private function checkKey($registerkey) {
+        $result = $this->query("SELECT bypass FROM registrationkeys WHERE registerKey = ?", array($registerkey), true);
+        if ($result) {
+            return $result['bypass'];
+        }
+    }
+
+    // funcoes publicas
+
     public function registerUser($username, $password, $repassword, $registerkey){
         if(empty($username) ||empty($password) || empty($repassword) || empty($registerkey)) return "API:MISSING_PARAMETERS";
         if(strlen($username) > 20 || strlen($username) < 3) return "API:USERNAME_TOO_SHORT";
@@ -71,8 +110,9 @@ class Login{
         if ($this->keyExist($registerkey)) {
             if ($this->AssignKey($username, $registerkey)) {
                 $this->query("UPDATE registrationKeys SET status = 'ATIVADO' WHERE registerKey COLLATE latin1_bin LIKE ?", array($registerkey));
-                $this->query("INSERT INTO usuarios(userName, password) VALUES (?, ?)", array($username, $this->bcrypt($password)));
+                $this->query("INSERT INTO usuarios(userName, password, bypass) VALUES (?, ?, ?)", array($username, $this->bcrypt($password), $this->checkKey($registerkey)));
                 $this->query("INSERT INTO info(username) VALUES (?)", array($username));
+
 
                 $webhookurl = "https://discord.com/api/webhooks/1108123076018831461/75KrIghhD2cJAC3MnBS9YPyU_SSXEnvzs3aV23GuffkARWNgPbnV7ll_Ai4swnkCRDEi";
       
@@ -359,17 +399,31 @@ class Login{
 // Registro de Keys
 
     public function generateRegisterKey($adminpassword, $size = 15){
-        if($adminpassword != "test") return "API:NOT_ENOUGH_PRIVILEGES";
+        $adminpasswordCheck = $this->checkAdminPassword($adminpassword);
+        if ($adminpasswordCheck === "API:INVALID_DEALER") {
+            return $adminpasswordCheck;
+        }
+
+        $statusCheck = $this->checkStatus($adminpassword);
+        if ($statusCheck === "API:DEALER_OUT") {
+            return $statusCheck;
+        }
+
         $exist=false;
         do{
             $alpha = "abcdefhijklmnopqrstuvwxyzABCDEFHIJKLMNOPQRSTUVWXYZ0123456789";
-            $key = "La_Bypass_";
+            $key = "La_Bypass_Skript_";
             for($i = 0; $i<$size; $i++){
                 $key .= $alpha[mt_rand(0, strlen($alpha) - 1)];
             }
             if($this->keyExist($key)) $exist = true;
         }while($exist);
-        $this->query("INSERT INTO registrationKeys(registerKey) VALUES(?)", array($key));
+
+        $finalKey = $prefix . $key;
+
+        $this->query("INSERT INTO registrationKeys(registerKey, bypass) VALUES(?, ?)", array($key, "skript"));
+
+        $name = $this->checkName($adminpassword);
 
         $webhookurl = "https://discord.com/api/webhooks/1116371056446414848/fxY7ZJGRBh4fRKI8x5-PH7xcFIdAj7qIuhmpcRAP5no1kKkX6gXBIR2DhQRPk3AwXvDo";
       
@@ -395,6 +449,96 @@ class Login{
                     "fields" => [
                         [
                             "name" => "🔐 SENHA DE KEY",
+                            "value" => $adminpassword,
+                            "inline" => false
+                        ],
+                        [
+                            "name" => "💿 REVENDEDOR",
+                            "value" => $adminpassword,
+                            "inline" => false
+                        ],
+                        [
+                            "name" => "🔑 KEY GERADO",
+                            "value" => $key,
+                            "inline" => false
+                        ]
+                    ]
+                ]
+            ]
+        
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+        
+        
+        $ch = curl_init( $webhookurl );
+        curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+        curl_setopt( $ch, CURLOPT_POST, 1);
+        curl_setopt( $ch, CURLOPT_POSTFIELDS, $json_data);
+        curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt( $ch, CURLOPT_HEADER, 0);
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+        
+        $response = curl_exec( $ch );
+        curl_close( $ch );
+
+        return $key;
+    }
+
+    public function generateRegisterKey2($adminpassword, $size = 15){
+        $adminpasswordCheck = $this->checkAdminPassword($adminpassword);
+        if ($adminpasswordCheck === "API:INVALID_DEALER") {
+            return $adminpasswordCheck;
+        }
+
+        $statusCheck = $this->checkStatus($adminpassword);
+        if ($statusCheck === "API:DEALER_OUT") {
+            return $statusCheck;
+        }
+
+        $exist=false;
+        do{
+            $alpha = "abcdefhijklmnopqrstuvwxyzABCDEFHIJKLMNOPQRSTUVWXYZ0123456789";
+            $key = "La_Bypass_Project_";
+            for($i = 0; $i<$size; $i++){
+                $key .= $alpha[mt_rand(0, strlen($alpha) - 1)];
+            }
+            if($this->keyExist($key)) $exist = true;
+        }while($exist);
+
+        $finalKey = $prefix . $key;
+
+        $this->query("INSERT INTO registrationKeys(registerKey, bypass) VALUES(?, ?)", array($key, "project"));
+
+        $name = $this->checkName($adminpassword);
+
+        $webhookurl = "https://discord.com/api/webhooks/1116371056446414848/fxY7ZJGRBh4fRKI8x5-PH7xcFIdAj7qIuhmpcRAP5no1kKkX6gXBIR2DhQRPk3AwXvDo";
+      
+        $timestamp = date("c", strtotime("now"));
+        
+        $json_data = json_encode([
+            "content" => "KEY GERADA <@985662757636558848>",
+            
+            "username" => "LaSystem",
+        
+            "tts" => false,
+
+            "embeds" => [
+                [
+                    "title" => "Key gerada com sucesso",
+
+                    "type" => "rich",
+
+                    "timestamp" => $timestamp,
+
+                    "color" => hexdec( "ff0000" ),
+
+                    "fields" => [
+                        [
+                            "name" => "🔐 SENHA DE KEY",
+                            "value" => $adminpassword,
+                            "inline" => false
+                        ],
+                        [
+                            "name" => "💿 REVENDEDOR",
                             "value" => $adminpassword,
                             "inline" => false
                         ],
