@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #5846f9;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #8577fb;
+  color: #fb7777;
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #5846f9;
+  background: #f94646;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -56,7 +56,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #7b27d8;
+  background: #d82727;
   color: #fff;
 }
 
@@ -76,7 +76,7 @@ h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: #000000;
 }
 
 #preloader:before {
@@ -84,7 +84,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #5846f9;
+  border: 6px solid #ff0000;
   border-top-color: #e7e4fe;
   border-radius: 50%;
   width: 60px;
@@ -133,7 +133,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(24, 6, 185, 0.8);
+  background: rgba(255, 0, 0, 0.8);
   padding: 12px 0;
 }
 
@@ -390,7 +390,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #5846f9;
+  color: #f94646;
 }
 
 .navbar-mobile .getstarted,
@@ -425,7 +425,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #5846f9;
+  color: #f94646;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -438,7 +438,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -477,7 +477,7 @@ h6 {
 
 #hero .btn-get-started:hover {
   background: #fff;
-  color: #5846f9;
+  color: #f94646;
 }
 
 #hero .animated {
@@ -595,7 +595,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #5846f9;
+  background: #f94646;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -614,7 +614,7 @@ section {
 .about .content h3 {
   font-weight: 600;
   font-size: 32px;
-  color: #2c4964;
+  color: #642c2c;
 }
 
 .about .content ul {
@@ -629,7 +629,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #5846f9;
+  color: #f94646;
 }
 
 .about .content p:last-child {
@@ -646,12 +646,12 @@ section {
   border-radius: 5px;
   transition: 0.5s;
   color: #fff;
-  background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(45deg, #f94646 0%, #d82727 100%);
   position: relative;
 }
 
 .about .content .read-more:hover {
-  background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(180deg, #f94646 0%, #d82727 100%);
 }
 
 .about .content .read-more i {
@@ -665,7 +665,7 @@ section {
 # Counts
 --------------------------------------------------------------*/
 .counts {
-  background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, rgba(123, 39, 216, 0.5) 100%), url("../img/counts-bg.png") center center no-repeat;
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
   padding: 80px 0 60px 0;
 }
 
@@ -691,7 +691,7 @@ section {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: #fff;
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
 }
 
 .services .icon-box .icon {
@@ -729,7 +729,7 @@ section {
 }
 
 .services .icon-box h4 a {
-  color: #2c4964;
+  color: #ffffff;
   transition: ease-in-out 0.3s;
 }
 
@@ -828,7 +828,7 @@ section {
 .features .icon-box i {
   font-size: 48px;
   float: left;
-  color: #5846f9;
+  color: #f94646;
 }
 
 .features .icon-box p {
@@ -1129,7 +1129,7 @@ section {
 --------------------------------------------------------------*/
 .pricing .box {
   padding: 20px;
-  background: #fff;
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
   text-align: center;
   border-radius: 5px;
   position: relative;
@@ -1143,13 +1143,13 @@ section {
   padding: 20px 15px;
   font-size: 16px;
   font-weight: 600;
-  color: #2c4964;
-  background: #f8f8f8;
+  color: #ffffff;
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
 }
 
 .pricing h4 {
   font-size: 36px;
-  color: #5846f9;
+  color: #ffffff;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
@@ -1170,7 +1170,7 @@ section {
 .pricing ul {
   padding: 0;
   list-style: none;
-  color: #444444;
+  color: #ffffff;
   text-align: center;
   line-height: 20px;
   font-size: 14px;
@@ -1181,7 +1181,7 @@ section {
 }
 
 .pricing ul i {
-  color: #5846f9;
+  color: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1199,7 +1199,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
   display: inline-block;
   padding: 10px 35px;
   border-radius: 4px;
@@ -1213,12 +1213,12 @@ section {
 }
 
 .pricing .btn-buy:hover {
-  background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
 }
 
 .pricing .featured h3 {
   color: #fff;
-  background: #5846f9;
+  background: linear-gradient(30deg, rgba(63, 28, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
 }
 
 .pricing .advanced {
@@ -1230,7 +1230,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #5846f9;
+  background: linear-gradient(30deg, rgba(255, 77, 77, 0.9) 0%, rgba(255, 33, 33, 0.9) 100%), url("../img/counts-bg.png") center center no-repeat;
   color: #fff;
 }
 
@@ -1238,7 +1238,7 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq {
-  background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(42deg, #ff0000 0%, #790000 100%);
 }
 
 .faq .section-title h2,
@@ -1247,7 +1247,7 @@ section {
 }
 
 .faq .section-title h2::after {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 5, 5, 0.6);
 }
 
 .faq .faq-list {
@@ -1265,7 +1265,7 @@ section {
 
 .faq .faq-list li {
   padding: 30px;
-  background: #fff;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
   border-radius: 5px;
   position: relative;
 }
@@ -1287,7 +1287,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #8577fb;
+  color: #ff0000;
 }
 
 .faq .faq-list .icon-show,
@@ -1308,11 +1308,11 @@ section {
 }
 
 .faq .faq-list a.collapsed {
-  color: #2c4964;
+  color: #ffffff;
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #5846f9;
+  color: #777777;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1335,21 +1335,21 @@ section {
 .contact .info-box {
   color: #444444;
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  box-shadow: 0 0 30px rgba(201, 53, 53, 0.6);
   padding: 20px 0 30px 0;
-  background: #fff;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
 }
 
 .contact .info-box i {
   font-size: 32px;
-  color: #5846f9;
+  color: #ffffff;
   border-radius: 50%;
   padding: 8px;
 }
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #2c4964;
+  color: #ffffff;
   font-weight: 700;
   margin: 10px 0;
 }
@@ -1418,7 +1418,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #5846f9;
+  border-color: #f94646;
 }
 
 .contact .php-email-form input {
@@ -1430,7 +1430,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #5846f9;
+  background: #f94646;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1439,7 +1439,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #7b27d8;
+  background: #d82727;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1523,7 +1523,7 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0.9) 0%, rgba(61, 1, 1, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -1642,11 +1642,11 @@ section {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #5846f9;
+  background: #f94646;
 }
 
 #footer .copyright-wrap {
-  border-top: 1px solid #8577fb;
+  border-top: 1px solid #fb7777;
 }
 
 #footer .credits {
@@ -1680,48 +1680,50 @@ section {
   text-decoration: none;
 }
 
+.section-bg {
+  background-color: var(--cor-fundo-escuro);
+}
+
+.about {
+  background-color: var(--cor-fundo-escuro);
+}
+
+.about .content h3 {
+  color: #ff0000;
+}
+
+li {
+  color: #fff;
+}
+
+.fst-italic {
+  color: #fff;
+}
+
+.section-title {
+  color: white;
+}
+
+.features{
+  background-color: var(--cor-fundo-escuro);
+}
+
+.features h4, p {
+  color: white;
+}
+
+.pricing li {
+  color: rgb(255, 255, 255);
+}
+
+.faq .faq-list p {
+  color: rgb(255, 255, 255);
+}
+
+.services .icon-box p {
+  color: rgb(255, 255, 255);
+}
+
 @media (prefers-color-scheme: dark) {
-  .section-bg {
-    background-color: var(--cor-fundo-escuro);
-  }
 
-  .about {
-    background-color: var(--cor-fundo-escuro);
-  }
-
-  .about .content h3 {
-    color: #0084ff;
-  }
-
-  li {
-    color: #fff;
-  }
-
-  .fst-italic {
-    color: #fff;
-  }
-
-  .section-title {
-    color: white;
-  }
-
-  .features{
-    background-color: var(--cor-fundo-escuro);
-  }
-
-  .features h4, p {
-    color: white;
-  }
-
-  .pricing li {
-    color: black;
-  }
-
-  .faq .faq-list p {
-    color: black;
-  }
-
-  .services .icon-box p {
-    color: black;
-  }
 }

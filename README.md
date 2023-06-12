@@ -21,7 +21,7 @@
 
 ## 🔜 Em Breve
 
-- Site
+- Cleaner de memoria otimizado
 
 ## 🔄 Atualizações
 
@@ -34,6 +34,8 @@
 - Adicionado animacoes
 - Adicionado status do loader em tempo real
 - Adicionado MultiCheat selector
+- Site
+
 
 ## 📄 Licença
 
