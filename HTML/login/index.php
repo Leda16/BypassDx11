@@ -27,7 +27,7 @@ session_start();
 
     <title>LA Bypass | Login</title>
     
-    <meta name="description" content="Most Powerful Loader">
+    <meta name="description" content="Most Powerful Bypass">
     <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5, csgo, midnight, neverlose, aimware, csgo, fivem, bypass, fivem bypass">
     <!-- Canonical SEO -->
     
@@ -106,7 +106,7 @@ session_start();
             </a>
           </div>
           <!-- /Logo -->
-          <h4 class="mb-2" style="color:rgb(0,216,9);">Welcome to LA Loader! 🚀</h4>
+          <h4 class="mb-2" style="color:red;">Welcome to LA Bypass! 🚀</h4>
           <p style="color:rgb(180,189,198); " class="mb-4">Please sign-in to your account</p>
 
    <?php
@@ -136,7 +136,7 @@ session_start();
                     
 
                                 <div class="mb-3 mb-0 text-center">
-              <button style="background-color:rgb(0,216,9); border-color:rgb(0,216,9);" class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+              <button style="background-color:red; border-color:red;" class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                                 </div>
 
                             </form>
