@@ -11,4 +11,4 @@ void mainprotect() {
 	std::thread(find_exe_title).detach();
 }
 
-
+//LA AntiCrack System Copyright 2023

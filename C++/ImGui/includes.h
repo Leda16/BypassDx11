@@ -19,9 +19,9 @@
 #include "func/changeName.h"
 #include "func/globalsE.h"
 #include "func/createNetwork.h"
-#include "func/getHwid.h"
 #include "func/getIp.h"
 #include "func/getInfo.h"
+#include "func/getHwid.h"
 
 // Cabeçalhos Imgui
 #include "main.hpp"
@@ -38,3 +38,6 @@
 
 // Cabeçalhos Bypass
 #include "bypass/skript.h"
+
+// PEGA NO MEU CRACKER?
+// #include "TENTA DA CRACK AI SEU MERDA, NEM ABRE O DEBBUGER NEH? ABRE O IDA PRA TESTA FDP"

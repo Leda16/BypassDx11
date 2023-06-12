@@ -224,11 +224,6 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 ImVec2 windowSize = ImGui::GetWindowSize();
                 ImVec2 windowPos = ImGui::GetWindowPos();
 
-
-
-
-
-
                 if (error) {
 
 
@@ -310,7 +305,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     MyStyles::PopStyleVars(2);
                     MyStyles::PopStyleColor(6);
 
-                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]); // define a fonte para "MinhaFonte"
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]); 
 
                     float text2PosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("Please log in to continue").x) / 1.9;
                     float text2PosY = windowPos.y + windowSize.y / 8;
@@ -318,11 +313,11 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.3f, 0.3f, 3.5f));
                     ImGui::Text("Please log in to continue", 6.5f);
                     ImGui::PopStyleColor();
-                    ImGui::PopFont(); // restaura a fonte anterior
+                    ImGui::PopFont(); 
 
 
 
-                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]); // define a fonte para "MinhaFonte"
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]); 
 
                     float textPosX = windowPos.x + (windowSize.x - ImGui::CalcTextSize("LaBypass").x) / 1.9;
                     float textPosY = windowPos.y + windowSize.y / 5;
@@ -335,7 +330,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
 
-                    ImGui::PopFont(); // restaura a fonte anterior
+                    ImGui::PopFont(); 
 
                     MyStyles::InputTextStyle();
                     float inputPosX = windowPos.x + windowSize.x / 5;
@@ -414,6 +409,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                                         if (responseInfo.find("API:INFORMATION_SEND") != std::string::npos) {
 
                                             // Kernel Mode DEBUG TESTES
+
+                                            std::string keyauth = "PROCURANDO OQ CRACKER PAU NO CU?";
 
 
                                             login = false;
@@ -496,6 +493,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                             apiError = true;
                         }
 
+                        std::string keyauth = "PROCURANDO OQ CRACKER PAU NO CU?";
 
                     }
                     MyStyles::PopStyleVars(2);
@@ -570,6 +568,9 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                         }
                     }
 
+                    std::string keyauth = "PROCURANDO OQ CRACKER PAU NO CU?";
+
+
                     float button2PosX = windowPos.x + windowSize.x - buttonWidth - buttonMargin;
                     float button2PosY = windowPos.y + (windowSize.y - buttonHeight) / 2.0f;
 
@@ -614,6 +615,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                         ButtonAnimations::HoverAnimation(10.0f);
 
+                        std::string keyauth = "PROCURANDO OQ CRACKER PAU NO CU?";
 
 
                         if (ImGui::Button("Injetar", ImVec2(250, 0))) {
@@ -686,6 +688,8 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
                     MyStyles::PopStyleVars(2);
                     MyStyles::PopStyleColor(6);
+
+                    std::string keyauth = "PROCURANDO OQ CRACKER PAU NO CU?";
 
                     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[0]);
 
@@ -782,6 +786,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                 if (hwidBan)
                 {
 
+                    std::string keyauth = "PROCURANDO OQ CRACKER PAU NO CU?";
 
                     ImGui::Image((void*)Gui::ImageResource, Gui::SizeImage);
 
@@ -1022,7 +1027,7 @@ int APIENTRY WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         g_pd3dDeviceContext->ClearRenderTargetView(g_mainRenderTargetView, clear_color_with_alpha);
         ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
 
-        g_pSwapChain->Present(1, 0); // Never set the 1 to 0 or the panel movment will get fucked
+        g_pSwapChain->Present(1, 0);
     }
     
     // Cleanup

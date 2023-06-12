@@ -9,13 +9,13 @@
 std::string sendRequest(const std::string& url) {
     HINTERNET hInternet = InternetOpenA("HTTPGET", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
     if (hInternet == NULL) {
-        std::cerr << "Falha ao abrir a conexão com a internet." << std::endl;
+        std::cerr << "Falha conexa internet." << std::endl;
         return "";
     }
 
     HINTERNET hConnect = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, INTERNET_FLAG_RELOAD, 0);
     if (hConnect == NULL) {
-        std::cerr << "Falha ao abrir o URL." << std::endl;
+        std::cerr << "Falha abrir URL." << std::endl;
         InternetCloseHandle(hInternet);
         return "";
     }

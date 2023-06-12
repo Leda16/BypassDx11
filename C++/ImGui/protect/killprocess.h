@@ -13,13 +13,10 @@ void executeCommand(const std::string& command)
 	si.cb = sizeof(si);
 	ZeroMemory(&pi, sizeof(pi));
 
-	// Cria um processo oculto
 	if (CreateProcess(NULL, const_cast<char*>(command.c_str()), NULL, NULL, FALSE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi))
 	{
-		// Espera até que o processo termine
 		WaitForSingleObject(pi.hProcess, INFINITE);
 
-		// Fecha os handles do processo e thread
 		CloseHandle(pi.hProcess);
 		CloseHandle(pi.hThread);
 	}
